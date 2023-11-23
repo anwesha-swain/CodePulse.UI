@@ -1,3 +1,4 @@
+import { UpdateCategoryRequest } from './../models/update-category-request.model';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
@@ -18,5 +19,13 @@ export class CategoryService {
 
   getAllCategories(): Observable<Category[]> {
     return this.http.get<Category[]>(`${environment.apiBaseUrl}/api/Categories`);
+  }
+
+  getCategoryById(id: string): Observable<Category> {
+    return this.http.get<Category>(`${environment.apiBaseUrl}/api/Categories/${id}`);
+  }
+
+  updateCategory(id: string, updateCategoryRequest: UpdateCategoryRequest): Observable<Category> {
+    return this.http.put<Category>(`${environment.apiBaseUrl}/api/categories/${id}`, updateCategoryRequest);
   }
 }

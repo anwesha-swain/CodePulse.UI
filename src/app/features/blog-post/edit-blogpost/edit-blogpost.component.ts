@@ -2,7 +2,7 @@ import { UpdateBlogPost } from './../models/update-blog-post.model';
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Subscription, Observable } from 'rxjs';
-import { BlogPostService } from '../blog-post.service';
+import { BlogPostService } from '../services/blog-post.service';
 import { BlogPost } from '../models/blog-post.model';
 import { CategoryService } from '../../category/services/category.service';
 import { Category } from '../../category/models/categoryModel';

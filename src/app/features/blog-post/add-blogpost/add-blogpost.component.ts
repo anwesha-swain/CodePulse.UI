@@ -1,7 +1,7 @@
 import { Observable, Subscription } from 'rxjs';
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { AddBlogPost } from '../models/add-blog-post.model';
-import { BlogPostService } from '../blog-post.service';
+import { BlogPostService } from '../services/blog-post.service';
 import { Router } from '@angular/router';
 import { CategoryService } from '../../category/services/category.service';
 import { Category } from '../../category/models/categoryModel';
